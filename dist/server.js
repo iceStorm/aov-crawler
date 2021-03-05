@@ -13,6 +13,10 @@ app.listen(PORT, () => {
     console.log('⚡️ Listening on port:', PORT);
     console.log(`http://localhost:${PORT}`);
 });
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
 app.get('/:id', async (req, res) => {
     const heroId = req.params.id;
     crawler_1.default(parseInt(heroId))

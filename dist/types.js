@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Data = exports.GuidesSet = exports.ArcanasSet = exports.SkillSet = exports.AttributesSet = exports.Skill = exports.Arcana = exports.Numeral = exports.Skin = void 0;
+exports.Data = exports.GuidesSet = exports.ArcanasSet = exports.SkillSet = exports.AttributesSet = exports.PreferedEquipment = exports.Skill = exports.Arcana = exports.Numeral = exports.Skin = void 0;
 class Skin {
 }
 exports.Skin = Skin;
@@ -13,6 +13,10 @@ exports.Arcana = Arcana;
 class Skill {
 }
 exports.Skill = Skill;
+class PreferedEquipment {
+}
+exports.PreferedEquipment = PreferedEquipment;
+// ---------------------------------------
 class AttributesSet {
     constructor() {
         this.physicalDamage = new Numeral();
@@ -34,7 +38,7 @@ class SkillSet {
         this.ability = new Skill();
         this.first = new Skill();
         this.second = new Skill();
-        this.third = new Skill();
+        this.ultimate = new Skill();
     }
 }
 exports.SkillSet = SkillSet;
@@ -48,7 +52,7 @@ class ArcanasSet {
 exports.ArcanasSet = ArcanasSet;
 class GuidesSet {
     constructor() {
-        this.skillsSet = new Skill();
+        this.notes = '';
         this.preferedArcarnas = new ArcanasSet();
         this.preferedEquipments = [];
     }

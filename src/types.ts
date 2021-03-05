@@ -17,12 +17,18 @@ export class Arcana {
 export class Skill {
     name!: string;
     iconURl!: string;
-    countDown!: number;
-    manaConsumption!: number;
+    countDown!: string;
+    manaConsumption!: string;
+    content!: string;
     videoUrl!: string;
 }
 
+export class PreferedEquipment {
+    iconUrl!: string;
+    content!: string;
+}
 
+// ---------------------------------------
 
 export class AttributesSet {
     physicalDamage = new Numeral();
@@ -36,14 +42,14 @@ export class AttributesSet {
     speed = new Numeral();
     hpRecovery = new Numeral();
     manaRecovery = new Numeral();
-    attackingArea!: string;
+    attackingRange!: string;
 }
 
 export class SkillSet {
     ability = new Skill();
     first = new Skill();
     second = new Skill();
-    third = new Skill();
+    ultimate = new Skill();
 }
 
 export class ArcanasSet {
@@ -53,15 +59,17 @@ export class ArcanasSet {
 }
 
 export class GuidesSet {
-    encouragedUse!: string;
-    skillsSet = new Skill();
+    introducingUrl!: string;
+    preferedLane!: string;
+    notes = '';
     increaseOrderingImageUrl!: string;
     preferedArcarnas = new ArcanasSet();
-    preferedEquipments: string[] = [];
+    preferedEquipments: PreferedEquipment[] = [];
 }
 
 
 export class Data {
+    type!: string;
     title!: string;
     story!: string;
     skins: Skin[] = [];

@@ -13,6 +13,11 @@ app.listen(PORT, () => {
 });
 
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 app.get('/:id', async (req, res) => {
     const heroId = req.params.id;
 
