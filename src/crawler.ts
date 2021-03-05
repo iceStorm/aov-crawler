@@ -41,7 +41,7 @@ function getData(body: any): Promise<Data> {
         data.skills = getSkills($);
         data.skins = getSkins($);
         data.attributes = getAttributes($);
-        data.story = $('.bxskill .cont-skill #tab-2').text().trim();
+        data.story = $('.bxskill .cont-skill #tab-2').html()?.trim();
         
         return resolve(data);
     });
@@ -159,7 +159,7 @@ function getSkillDetail($: cheerio.Cheerio): Skill {
     data.name = $.find('.in-skill .name').text().trim();
     data.countDown = $.find('.in-skill .txt:nth-of-type(1)').text().trim().split('Hồi chiêu: ')[1].split(' giây')[0];
     data.manaConsumption = $.find('.in-skill .txt:nth-of-type(2)').text().trim().split('Tiêu hao: ')[1].split('năng lượng')[0].trim();
-    data.content = $.find('.in-skill .txt:nth-of-type(3)').html() as string;
+    data.content = $.find('.in-skill .txt:nth-of-type(3)').html()?.trim() as string;
     data.videoUrl = $.find('.in-skill div:last-child a').attr('href') as string;
 
     return data;
@@ -199,7 +199,7 @@ function getGuides($: cheerio.Root): GuidesSet {
 
     // notes
     root.find('table:last-of-type').nextAll().each(function(index, elem) {
-        data.notes += $(elem).text() + '\n';
+        data.notes += $(elem).html()?.trim();
     });
 
 

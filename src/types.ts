@@ -71,7 +71,7 @@ export class GuidesSet {
 export class Data {
     type!: string;
     title!: string;
-    story!: string;
+    story?: string;
     skins: Skin[] = [];
     attributes = new AttributesSet();
     skills = new SkillSet();

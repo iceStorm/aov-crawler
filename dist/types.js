@@ -1,24 +1,39 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Data = exports.GuidesSet = exports.ArcanasSet = exports.SkillSet = exports.AttributesSet = exports.PreferedEquipment = exports.Skill = exports.Arcana = exports.Numeral = exports.Skin = void 0;
-class Skin {
-}
+var Skin = /** @class */ (function () {
+    function Skin() {
+    }
+    return Skin;
+}());
 exports.Skin = Skin;
-class Numeral {
-}
+var Numeral = /** @class */ (function () {
+    function Numeral() {
+    }
+    return Numeral;
+}());
 exports.Numeral = Numeral;
-class Arcana {
-}
+var Arcana = /** @class */ (function () {
+    function Arcana() {
+    }
+    return Arcana;
+}());
 exports.Arcana = Arcana;
-class Skill {
-}
+var Skill = /** @class */ (function () {
+    function Skill() {
+    }
+    return Skill;
+}());
 exports.Skill = Skill;
-class PreferedEquipment {
-}
+var PreferedEquipment = /** @class */ (function () {
+    function PreferedEquipment() {
+    }
+    return PreferedEquipment;
+}());
 exports.PreferedEquipment = PreferedEquipment;
 // ---------------------------------------
-class AttributesSet {
-    constructor() {
+var AttributesSet = /** @class */ (function () {
+    function AttributesSet() {
         this.physicalDamage = new Numeral();
         this.magicalDamage = new Numeral();
         this.maximumHP = new Numeral();
@@ -31,39 +46,44 @@ class AttributesSet {
         this.hpRecovery = new Numeral();
         this.manaRecovery = new Numeral();
     }
-}
+    return AttributesSet;
+}());
 exports.AttributesSet = AttributesSet;
-class SkillSet {
-    constructor() {
+var SkillSet = /** @class */ (function () {
+    function SkillSet() {
         this.ability = new Skill();
         this.first = new Skill();
         this.second = new Skill();
         this.ultimate = new Skill();
     }
-}
+    return SkillSet;
+}());
 exports.SkillSet = SkillSet;
-class ArcanasSet {
-    constructor() {
+var ArcanasSet = /** @class */ (function () {
+    function ArcanasSet() {
         this.red = new Arcana();
         this.purple = new Arcana();
         this.green = new Arcana();
     }
-}
+    return ArcanasSet;
+}());
 exports.ArcanasSet = ArcanasSet;
-class GuidesSet {
-    constructor() {
+var GuidesSet = /** @class */ (function () {
+    function GuidesSet() {
         this.notes = '';
         this.preferedArcarnas = new ArcanasSet();
         this.preferedEquipments = [];
     }
-}
+    return GuidesSet;
+}());
 exports.GuidesSet = GuidesSet;
-class Data {
-    constructor() {
+var Data = /** @class */ (function () {
+    function Data() {
         this.skins = [];
         this.attributes = new AttributesSet();
         this.skills = new SkillSet();
         this.guides = new GuidesSet();
     }
-}
+    return Data;
+}());
 exports.Data = Data;
